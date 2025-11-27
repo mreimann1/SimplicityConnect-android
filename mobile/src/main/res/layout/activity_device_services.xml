@@ -81,9 +81,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:background="?attr/selectableItemBackground"
-                android:padding="@dimen/space_XS"
+                android:padding="@dimen/space_M"
                 android:text="@string/ota_firmware"
-                android:textColor="@color/silabs_black"/>
+                android:textColor="@color/silabs_black"
+                android:textSize="18sp"/>
 
         </RelativeLayout>
 

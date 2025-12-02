@@ -48,7 +48,8 @@
                 android:id="@+id/tv_bond_state_with_rssi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true" >
+                android:layout_centerVertical="true"
+                android:visibility="gone" >
 
                 <TextView
                     android:id="@+id/tv_bond_state"
@@ -86,12 +87,25 @@
                 android:textColor="@color/silabs_black"
                 android:textSize="18sp"/>
 
+                <!-- 
+                    From previous design
+                    <TextView
+                        android:id="@+id/tv_ota_firmware"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="@dimen/space_XS"
+                        android:text="@string/ota_firmware"
+                        android:textColor="@color/silabs_black"/> -->
+                        
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" >
+            android:layout_weight="1"
+            android:visibility="gone" >
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/services_fragment_container"
@@ -126,6 +140,7 @@
             android:id="@+id/services_bottom_nav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             app:menu="@menu/bottom_nav_device_services" />
 
 

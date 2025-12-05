@@ -80,7 +80,8 @@
 
 
     <!-- REDESIGN 07/22 -->
-    <color name="blue_primary">#0f62f3</color>
+    <!-- <color name="blue_primary">#0f62f3</color> -->
+    <!-- <color name="blue_primary">#0C2340</color>
 
     <color name="blue_dark">#A00f62f3</color>
     <color name="blue_teal">#bff3ff</color>
@@ -102,6 +103,46 @@
     <color name="list_item_card_view_icon_foreground">@android:color/black</color>
 
     <color name="bar_with_additional_info">@color/white</color>
+
+    <color name="track_disabled">#80C0C0C0</color>
+    <color name="thumb_disabled">#80FFFFFF</color>
+
+    <color name="fly_in_bar_gradient">#B3B3FF</color>
+    <color name="spinner_end_gradient">@color/blue_dark</color>
+    <color name="seekbar_progress">@color/blue_dark</color>
+    <color name="seekbar_background">@color/gray_background</color>
+    <color name="beacon_filter_background">#F0F0F0</color>
+
+    <color name="splash_screen_end_gradient">#6CCFFF</color>
+    <color name="splash_screen_start_gradient">#0F62FE</color>
+
+    <color name="graph_label_inactive">#E0E0E0</color> -->
+
+    <!-- REDESIGN 07/22 -->
+    <!-- <color name="blue_primary">#0f62f3</color> -->
+    <color name="blue_primary">#0C2340</color>
+
+    <color name="blue_dark">#A00f62f3</color>
+    <color name="blue_teal">#bff3ff</color>
+
+    <color name="gray_background">#D7D7D7</color>
+
+    <color name="full_screen_info">#5089b2</color>
+
+    <color name="gray_subtle">#e1e1e1</color>
+    <color name="btn_action_on">#D91E2A</color>
+    <color name="btn_disabled">#c2c2c2</color>
+
+    <color name="menu_icon">@android:color/white</color>
+    <color name="action_icon">@color/silabs_dark_gray_icon</color>
+
+    <color name="list_item_card_view_box">@android:color/white</color>
+    <color name="list_item_card_view_details">@color/gray_subtle</color>
+    <color name="list_item_card_view_icon_background">#E7E7E7</color>
+    <color name="list_item_card_view_icon_foreground">@android:color/black</color>
+
+    <color name="bar_with_additional_info">@color/white</color>
+    <!-- <color name="bar_with_additional_info">0C2340 </color> -->
 
     <color name="track_disabled">#80C0C0C0</color>
     <color name="thumb_disabled">#80FFFFFF</color>

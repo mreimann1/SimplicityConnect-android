@@ -88,6 +88,7 @@
     <!-- WiFi Commissioning -->
     <color name="grey">#808080</color>
 
+    <!-- MR: White used for OTA btn -->
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="silabs_soft_black">#414a4c</color>

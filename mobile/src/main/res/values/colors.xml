@@ -95,6 +95,8 @@
     <color name="silabs_soft_red">#ff9b9b</color>
     <color name="silabs_soft_blue">#d1dff6</color>
     <color name="silabs_soft_green">#6FC276</color>
+    <color name="jwap_ota_background">#202020</color>
+    <color name="jwap_ota_stroke">#2F6F92</color>
 
 
     <!-- REDESIGN 07/22 -->

@@ -40,9 +40,10 @@
             android:id="@+id/connection_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/bar_with_additional_info"
-            android:paddingVertical="@dimen/space_XS"
-            android:paddingHorizontal="@dimen/space_S">
+            android:background="@drawable/bg_jwap_ota"
+            android:padding="10dp">
+            <!-- android:paddingVertical="@dimen/space_XS"
+            android:paddingHorizontal="@dimen/space_S"> -->
 
             <LinearLayout
                 android:id="@+id/tv_bond_state_with_rssi"
@@ -55,7 +56,7 @@
                     android:id="@+id/tv_bond_state"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/silabs_black"
+                    android:textColor="@color/silabs_white"
                     tools:text="BONDED" />
 
                 <TextView
@@ -63,14 +64,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/separator"
-                    android:textColor="@color/silabs_black"
+                    android:textColor="@color/silabs_white"
                     android:layout_marginHorizontal="@dimen/space_XXS" />
 
                 <TextView
                     android:id="@+id/tv_rssi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/silabs_black"
+                    android:textColor="@color/silabs_white"
                     android:textSize="@dimen/rssi_indicator_text_size"
                     tools:text="- dBm"/>
 
@@ -84,21 +85,8 @@
                 android:background="?attr/selectableItemBackground"
                 android:padding="@dimen/space_M"
                 android:text="@string/ota_firmware"
-                android:textColor="@color/silabs_black"
+                android:textColor="@color/silabs_white"
                 android:textSize="18sp"/>
-
-                <!-- 
-                    From previous design
-                    <TextView
-                        android:id="@+id/tv_ota_firmware"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:background="?attr/selectableItemBackground"
-                        android:padding="@dimen/space_XS"
-                        android:text="@string/ota_firmware"
-                        android:textColor="@color/silabs_black"/> -->
-                        
         </RelativeLayout>
 
         <RelativeLayout

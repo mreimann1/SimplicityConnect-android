@@ -36,6 +36,7 @@
         android:orientation="vertical"
         android:layout_height="match_parent" >
 
+        <!-- OTA Button Container -->
         <RelativeLayout
             android:id="@+id/connection_info"
             android:layout_width="match_parent"
@@ -45,37 +46,46 @@
             <!-- android:paddingVertical="@dimen/space_XS"
             android:paddingHorizontal="@dimen/space_S"> -->
 
-            <LinearLayout
-                android:id="@+id/tv_bond_state_with_rssi"
+            <!-- Frame Layour container to hide bond state -->
+            <FrameLayout
+                android:id="@+id/bond_state_container"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:visibility="gone" >
+                android:visibility="gone">
 
-                <TextView
-                    android:id="@+id/tv_bond_state"
+                <LinearLayout
+                    android:id="@+id/tv_bond_state_with_rssi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/silabs_white"
-                    tools:text="BONDED" />
+                    android:layout_centerVertical="true"
+                    android:visibility="gone" >
 
-                <TextView
-                    android:id="@+id/separator"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/separator"
-                    android:textColor="@color/silabs_white"
-                    android:layout_marginHorizontal="@dimen/space_XXS" />
+                    <TextView
+                        android:id="@+id/tv_bond_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/silabs_white"
+                        tools:text="BONDED" />
 
-                <TextView
-                    android:id="@+id/tv_rssi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/silabs_white"
-                    android:textSize="@dimen/rssi_indicator_text_size"
-                    tools:text="- dBm"/>
+                    <TextView
+                        android:id="@+id/separator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/separator"
+                        android:textColor="@color/silabs_white"
+                        android:layout_marginHorizontal="@dimen/space_XXS" />
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_rssi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/silabs_white"
+                        android:textSize="@dimen/rssi_indicator_text_size"
+                        tools:text="- dBm"/>
+
+                </LinearLayout>
+            </FrameLayout>
 
             <TextView
                 android:id="@+id/tv_ota_firmware"

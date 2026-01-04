@@ -99,6 +99,69 @@
                 android:textSize="18sp"/>
 
         </RelativeLayout>
+        <!-- OTA Button Container -->
+        <RelativeLayout
+            android:id="@+id/connection_info_midi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_jwap_ota"
+            android:padding="10dp">
+            <!-- android:paddingVertical="@dimen/space_XS"
+            android:paddingHorizontal="@dimen/space_S"> -->
+
+            <!-- Frame Layour container to hide bond state -->
+            <FrameLayout
+                android:id="@+id/bond_state_container_midi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/tv_bond_state_with_rssi_midi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_bond_state_midi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/silabs_white"
+                        tools:text="BONDED" />
+
+                    <TextView
+                        android:id="@+id/separator_midi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/separator"
+                        android:textColor="@color/silabs_white"
+                        android:layout_marginHorizontal="@dimen/space_XXS" />
+
+                    <TextView
+                        android:id="@+id/tv_rssi_midi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/silabs_white"
+                        android:textSize="@dimen/rssi_indicator_text_size"
+                        tools:text="- dBm"/>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_ota_firmware_midi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/space_M"
+                android:text="@string/ota_firmware_midi"
+                android:textColor="@color/silabs_white"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"

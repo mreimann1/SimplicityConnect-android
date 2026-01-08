@@ -560,6 +560,9 @@ class DeviceServicesActivity : BaseActivity() {
         binding.tvOtaFirmware.setOnClickListener {
             if (isUiCreated) checkForOtaCharacteristic()
         }
+        binding.tvOtaFirmwareMidi.setOnClickListener { // MR
+            if (isUiCreated) checkForOtaCharacteristic()
+        }
         binding.btnDisconnect.setOnClickListener {
 
             if(null != intent && intent.getStringExtra(ORIGIN).equals("BrowserFragment",true)){

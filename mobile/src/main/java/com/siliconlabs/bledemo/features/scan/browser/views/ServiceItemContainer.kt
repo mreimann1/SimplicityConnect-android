@@ -3,6 +3,7 @@ package com.siliconlabs.bledemo.features.scan.browser.views
 import android.bluetooth.BluetoothGattService
 import android.content.Context
 import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,6 +39,7 @@ class ServiceItemContainer(
     }
 
     private fun initViews() {
+        Log.d("ServiceItemContainer", "initViews...") // MR
         _binding.apply {
             serviceCharacteristicsContainer.apply {
                 visibility = View.GONE
@@ -48,8 +50,17 @@ class ServiceItemContainer(
                 NameType.ENGINE, NameType.CUSTOM -> View.GONE
                 NameType.USER, NameType.UNKNOWN -> View.VISIBLE
             }
+            // MR: Log the service UUID being initialized
             serviceUuid.text = UuidUtils.getUuidText(service.uuid)
-
+            Log.d("ServiceItemContainer", "initViews: Initializing service with UUID: ${service.uuid}")
+            // Check if the UUID matches the hardcoded OTA Service UUID
+            val otaServiceUuid = UUID.fromString("1d14d6ee-fd63-4fa1-bfa4-8f47b42119f0")
+            if (service.uuid == otaServiceUuid) {
+                Log.d("ServiceItemContainer", "OTA Service Found!")
+            }
+            else { // MR: Hide when service is not OTA
+                root.visibility = View.GONE
+            }
 
             if (service.characteristics.isEmpty()) {
                 characteristicsSeparator.visibility = GONE
@@ -166,6 +177,13 @@ class ServiceItemContainer(
                 0 -> setMargins(horizontalMargin, verticalSpacing, horizontalMargin, verticalSpacing)
                 else -> setMargins(horizontalMargin, 0, horizontalMargin, verticalSpacing)
             }
+        }
+    }
+
+    // MR: Add logging for service UUIDs
+    fun logServiceUUIDs(serviceUUIDs: List<UUID>) {
+        serviceUUIDs.forEach { uuid ->
+            Log.d("ServiceItemContainer", "Service UUID: $uuid")
         }
     }
 
